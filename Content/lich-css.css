@@ -1,0 +1,45 @@
+﻿@keyframes appear {
+    from {
+        opacity: 0.2;
+        transform: translateX(-250px); /* Di chuyển từ bên phải */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Đến giữa */
+    }
+}
+
+.head-event {
+    opacity: 0; /* Ẩn ban đầu */
+    transform: translateX(300px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+    .head-event.animate {
+        opacity: 1;
+        animation: appear 1.5s ease-out forwards;
+    }
+
+@keyframes zoomInAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.8); /* Bắt đầu nhỏ hơn và mờ */
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1); /* Phóng to đến kích thước gốc và rõ dần */
+    }
+}
+
+.ev {
+    opacity: 0; /* Ẩn ban đầu */
+    transform: scale(0.8); /* Nhỏ hơn kích thước ban đầu */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+    .ev.animate {
+        opacity: 1;
+        animation: zoomInAppear 1s ease-out forwards;
+    }
